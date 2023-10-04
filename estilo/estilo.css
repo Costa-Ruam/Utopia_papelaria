@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --azul-medio:#266F8C;
+    --rosa: #F29B9C;
+    --azul-marinho:#163A59;
+    --largura: 1440px;
+    --parágrafo:'Mulish', sans-serif;
+    --Título-principal:'Abril Fatface', cursive;
+    --título-secundario:'DM Serif Display', serif;
+}
+
+body h1{
+    font-family: var(--Título-principal);
+    text-transform: uppercase;
+}
+
+body p{
+    font-family: var(--parágrafo);
+}
+
+body h2{
+    font-family: var(--título-secundario);
+}
+
+.main, .categoria, .itens_destaque, .material_escolar, .artigo, .app, .clube{
+    margin: auto;
+    width: var(--largura);  
+}
+
+.cabecalho{
+    background-color: var(--azul-medio);
+    padding: 1.25em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.logo img{
+    width: 8%;
+}
+
+.bi-headset, .bi-person-circle, .bi-search, .bi-cart-fill{
+    color: white;
+    margin-right: 1em;
+}
+
+.log_in, .fone, .carrinho{
+    display: flex;
+}
+
+.acesso{
+    background-color:var(--rosa);
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.acesso input{
+    border-radius: 1em;
+    padding: .25em;
+    outline: none;
+    border: none;
+    margin-right: 1em;
+}
+
+.navegacao{
+    background-color:var(--azul-marinho);
+    padding: .8em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+.navegacao a{
+    color: white;
+    text-decoration: none;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50vh 20vh;
+    grid-template-areas:
+        'serv1 serv2 serv2'
+        'text1 text2 text3';
+    gap: 1em;
+}
+
+.serv1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5em;
+    color: white;
+    text-align: center;
+    background-image: url(../img/volta_as_aulas.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: serv1;
+}
+
+.serv1 p{
+    margin: 3em;
+}
+
+.serv2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5em;
+    color: var(--azul-marinho);
+    text-align: center;
+    background-image: url(../img/serv2.png);
+    background-size: cover;
+    background-position: center;
+    grid-area: serv2;
+}
+
+.serv2 p{
+    margin: 3em;
+}
+
+
+.text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 5em;
+    background-image: url(../img/pontos_azul_escuro.png);
+    background-repeat: repeat-x;
+    background-size: 20%;
+    background-color: var(--azul-medio);
+    color: white;
+    grid-area: text1;
+}
+
+.text2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 5em;
+    background-image: url(../img/pontos_azul_escuro.png);
+    background-repeat: repeat-x;
+    background-size: 20%;
+    background-color: var(--azul-medio);
+    color: white;
+    grid-area: text2;
+}
+
+.text3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 5em;
+    background-image: url(../img/pontos_azul_escuro.png);
+    background-repeat: repeat-x;
+    background-size: 20%;
+    background-color: var(--azul-medio);
+    color: white;
+    grid-area: text3;
+}
+
+.main a{
+    text-decoration: none;
+    font-family: var(--parágrafo);
+    color: white;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.serv1 a{
+    background-color:var(--rosa);
+}
+
+.serv2 a{
+    background-color: var(--azul-medio);
+}
+
+.itens_destaque, .material_escolar{
+    margin-top: 12em;
+    margin-bottom: 10em;
+}
+
+.itens_destaque h1, .material_escolar h1{
+    margin: 5em;
+    text-align: center;
+    color: var(--azul-marinho);
+}
+.itens_p, .materiais{
+    display: flex;
+    justify-content: space-around;
+}
+.itens_p img, .materiais img{
+    width: 70%;
+    margin-bottom: 1em;
+}
+
+.categoria{
+    margin-bottom: 5em;
+}
+
+.categoria h1{
+    margin-bottom: 4em;
+    text-align: center;
+    color: var(--azul-marinho);
+}
+
+
+.conjunto_cat{
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20vh 20vh;
+    grid-template-areas:
+    'cat1 cat2 cat3 cat4'
+    'cat5 cat6 cat7 cat8';
+    gap: 1em;
+}
+
+.conjunto_cat div{
+    padding: 5em;
+    background-size: cover;
+    background-position: center;
+}
+
+.conjunto_cat a{
+    text-decoration: none;
+    color: white;
+    font-family: var(--título-secundario);
+    font-size: 1.5em;
+}
+
+.cat1{
+    grid-area: cat1;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/oferta.jpg);
+}
+.cat2{
+    grid-area: cat2;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/escritorio.jpg);
+}
+.cat3{
+    grid-area: cat3;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/escolar.jpg);
+}
+.cat4{
+    grid-area: cat4;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/limpeza.jpg);
+}
+.cat5{
+    grid-area: cat5;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/cafe.jpg);
+}
+.cat6{
+    grid-area: cat6;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/mobiliario.jpg);
+}
+.cat7{
+    grid-area: cat7;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/papelaria.jpg);
+}
+.cat8{
+    grid-area: cat8;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/eletronicos.jpg);
+}
+
+.artigo{
+    margin: 12em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40vh;
+    grid-template-areas:
+    'art1 art2';
+    gap: 1em;
+    text-align: center;
+}
+
+
+.art1{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0)), url(../img/material_roxo.png);
+    grid-area: art1;
+}
+
+.art1 h1, .art1 p, .art2 h1, .art2 p{
+    color: white;
+    margin-bottom: 2em;
+}
+
+.artigo a{
+    padding: 1em;
+    color: white;
+    border-radius: 1em;
+    text-decoration: none;
+}
+
+.art1 a{
+    background-color: #75BFBF;
+    font-family: var(--parágrafo);
+}
+
+.art2 a{
+    background-color: var(--rosa);
+    font-family: var(--parágrafo);
+}
+
+.art2{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0)), url(../img/material_latas.png);
+    grid-area: art2;
+}
+
+.art1, .art2{
+    padding: 1em;
+    background-position: center;
+    background-size: cover;
+}
+
+.app{
+    background-image: url(../img/smartphone-5305625_1280.jpg);
+    background-color: #FFD1D4;
+    background-position: left;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 40vh;
+    grid-template-areas:
+    'empty texto';
+}
+
+.empty{
+    grid-area: empty;
+}
+
+.text_app{
+    color: var(--azul-marinho);
+    grid-area: texto;
+}
+.text_app p{
+    margin: 3em 8em 4em 0em;
+}
+
+.text_app a{
+    text-decoration: none;
+    font-family: var(--parágrafo);
+    color: white;
+    padding: 1em;
+    background-color: var(--azul-medio);
+    border-radius: 1em;
+}
+
+.text_app h1{
+    background-color: ;
+}
+
+.clube{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30vh;
+    grid-template-areas:
+    'clube oferta'
+}
+
+.clube_form, .clube_oferta{
+    text-align: center;
+}
+
+.clube_form{
+    background-color: var(--azul-medio);
+    grid-area: clube;
+    padding: 5em;
+    color: white;
+}
+
+.clube_form h1{
+    margin-bottom: 1em;
+}
+
+.clube_oferta{
+    background-color: var(--rosa);
+    grid-area: oferta;
+    padding: 5em;
+}
+
+.clube_oferta hr{
+    margin: 1em
+}
+
+.square{
+    width: 95%;
+    background-color: white;
+    border-radius: 1em;
+    padding: 1em;
+    align-items: center;
+}
+
+
+#mail{
+    margin-top: 2em;
+    border-radius: 1em;
+    padding: .5em;
+    outline: none;
+    border: none;
+    margin-right: 1em;
+}
+
+#send{
+    background-color: var(--rosa);
+    border-radius: 1em;
+    padding: .5em 1em;
+    border: none;
+    color: white;
+    font-family: var(--parágrafo);
+}
+
+.rodape{
+    background-color: #75BFBF;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+}
+
+.rodape img{
+    width: 50px;
+    mix-blend-mode: luminosity;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and(max-width: 600px) {
+    
+}
